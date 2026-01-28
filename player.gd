@@ -39,9 +39,9 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 		if velocity != Vector2.ZERO:
 			_play_walk(input_dir)
-			_current_dir = input_dir
+			_last_facing_dir = input_dir
 		else:
-			_play_idle(_current_dir)
+			_play_idle(_last_facing_dir)
 		
 	else:
 		velocity = Vector2.ZERO
