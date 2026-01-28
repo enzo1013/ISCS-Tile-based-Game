@@ -81,6 +81,34 @@ func _update_movement(delta: float) -> void:
 				_start_move_to(target_tile) # Have the player move again
 				_play_idle(_last_facing_dir) # Replaces the movement animation done by _start_move_to()
 				return
+				
+		if _is_left(global_position):
+			var target_tile := global_position + Vector2.LEFT * tile_size
+			if _can_move_to(target_tile):
+				_start_move_to(target_tile) # Have the player move again
+				_play_idle(Vector2.LEFT) # Replaces the movement animation done by Vector2 direction
+				return
+				
+		if _is_right(global_position):
+			var target_tile := global_position + Vector2.RIGHT * tile_size
+			if _can_move_to(target_tile):
+				_start_move_to(target_tile) # Have the player move again
+				_play_idle(Vector2.RIGHT) # Replaces the movement animation done by Vector2 direction
+				return
+				
+		if _is_up(global_position):
+			var target_tile := global_position + Vector2.UP * tile_size
+			if _can_move_to(target_tile):
+				_start_move_to(target_tile) # Have the player move again
+				_play_idle(Vector2.UP) # Replaces the movement animation done by Vector2 direction
+				return
+				
+		if _is_down(global_position):
+			var target_tile := global_position + Vector2.DOWN * tile_size
+			if _can_move_to(target_tile):
+				_start_move_to(target_tile) # Have the player move again
+				_play_idle(Vector2.DOWN) # Replaces the movement animation done by Vector2 direction
+				return
 
 		var continued := _try_continue_moving()
 		if not continued:
@@ -148,6 +176,70 @@ func _is_slippery(position: Vector2) -> bool:
 		return false
 	if tile_data.has_custom_data("slippery"):
 		return bool(tile_data.get_custom_data("slippery"))
+	
+	return false
+	
+func _is_left(position: Vector2) -> bool:
+	if ground_layer == null:
+		return false
+		
+	# Get position's tile data
+	var local_position: Vector2 = ground_layer.to_local(position)
+	var cell_coords: Vector2i = ground_layer.local_to_map(local_position)
+	var tile_data: TileData = ground_layer.get_cell_tile_data(cell_coords)
+	
+	if tile_data == null:
+		return false
+	if tile_data.has_custom_data("left"):
+		return bool(tile_data.get_custom_data("left"))
+	
+	return false
+	
+func _is_right(position: Vector2) -> bool:
+	if ground_layer == null:
+		return false
+		
+	# Get position's tile data
+	var local_position: Vector2 = ground_layer.to_local(position)
+	var cell_coords: Vector2i = ground_layer.local_to_map(local_position)
+	var tile_data: TileData = ground_layer.get_cell_tile_data(cell_coords)
+	
+	if tile_data == null:
+		return false
+	if tile_data.has_custom_data("right"):
+		return bool(tile_data.get_custom_data("right"))
+	
+	return false
+	
+func _is_up(position: Vector2) -> bool:
+	if ground_layer == null:
+		return false
+		
+	# Get position's tile data
+	var local_position: Vector2 = ground_layer.to_local(position)
+	var cell_coords: Vector2i = ground_layer.local_to_map(local_position)
+	var tile_data: TileData = ground_layer.get_cell_tile_data(cell_coords)
+	
+	if tile_data == null:
+		return false
+	if tile_data.has_custom_data("up"):
+		return bool(tile_data.get_custom_data("up"))
+	
+	return false
+	
+func _is_down(position: Vector2) -> bool:
+	if ground_layer == null:
+		return false
+		
+	# Get position's tile data
+	var local_position: Vector2 = ground_layer.to_local(position)
+	var cell_coords: Vector2i = ground_layer.local_to_map(local_position)
+	var tile_data: TileData = ground_layer.get_cell_tile_data(cell_coords)
+	
+	if tile_data == null:
+		return false
+	if tile_data.has_custom_data("down"):
+		return bool(tile_data.get_custom_data("down"))
 	
 	return false
 	
