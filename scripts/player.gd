@@ -84,30 +84,34 @@ func _update_movement(delta: float) -> void:
 				
 		if _is_left(global_position):
 			var target_tile := global_position + Vector2.LEFT * tile_size
+			_current_dir = Vector2.LEFT
 			if _can_move_to(target_tile):
 				_start_move_to(target_tile) # Have the player move again
-				_play_idle(Vector2.LEFT) # Replaces the movement animation done by Vector2 direction
+				_play_idle(_current_dir) # Replaces the movement animation done by _start_move_to()
 				return
 				
 		if _is_right(global_position):
 			var target_tile := global_position + Vector2.RIGHT * tile_size
+			_current_dir = Vector2.RIGHT
 			if _can_move_to(target_tile):
 				_start_move_to(target_tile) # Have the player move again
-				_play_idle(Vector2.RIGHT) # Replaces the movement animation done by Vector2 direction
+				_play_idle(_current_dir) # Replaces the movement animation done by _start_move_to()
 				return
 				
 		if _is_up(global_position):
 			var target_tile := global_position + Vector2.UP * tile_size
+			_current_dir = Vector2.UP
 			if _can_move_to(target_tile):
 				_start_move_to(target_tile) # Have the player move again
-				_play_idle(Vector2.UP) # Replaces the movement animation done by Vector2 direction
+				_play_idle(_current_dir) # Replaces the movement animation done by _start_move_to()
 				return
 				
 		if _is_down(global_position):
 			var target_tile := global_position + Vector2.DOWN * tile_size
+			_current_dir = Vector2.DOWN
 			if _can_move_to(target_tile):
 				_start_move_to(target_tile) # Have the player move again
-				_play_idle(Vector2.DOWN) # Replaces the movement animation done by Vector2 direction
+				_play_idle(_current_dir) # Replaces the movement animation done by _start_move_to()
 				return
 
 		var continued := _try_continue_moving()
