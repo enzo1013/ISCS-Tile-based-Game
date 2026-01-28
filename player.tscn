@@ -154,6 +154,7 @@ animations = [{
 size = Vector2(16, 16)
 
 [node name="player" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
