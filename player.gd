@@ -63,14 +63,24 @@ func _start_move_to(target: Vector2) -> void:
 	_last_facing_dir = _current_dir
 	_play_walk(_current_dir)
 
+# Update the player's movement (used when they are in the process of walking)
 func _update_movement(delta: float) -> void:
 	_move_timer += delta
 	var t := _move_timer / move_time
 
+	# Stop after moving
 	if t >= 1.0:
 		t = 1.0
 		_is_moving = false
 		global_position = _target_pos
+		
+		# If the player lands on a slippery tile, check if they can slide to the next tile
+		if _is_slippery(global_position):
+			var target_tile := global_position + _current_dir * tile_size
+			if _can_move_to(target_tile):
+				_start_move_to(target_tile) # Have the player move again
+				_play_idle(_last_facing_dir) # Replaces the movement animation done by _start_move_to()
+				return
 
 		var continued := _try_continue_moving()
 		if not continued:
@@ -109,23 +119,38 @@ func _snap_to_grid(pos: Vector2) -> Vector2:
 	p.y = round(p.y / tile_size.y) * tile_size.y
 	return p + grid_offset
 
-func _can_move_to(target: Vector2) -> bool: # you can use this to help implement collisions
+func _can_move_to(target: Vector2) -> bool:
 	if obstacle_layer == null:
 		return true
 	
 	var local_target: Vector2 = obstacle_layer.to_local(target)
 	var cell_coords: Vector2i = obstacle_layer.local_to_map(local_target)
-	
 	var tile_data: TileData = obstacle_layer.get_cell_tile_data(cell_coords)
 	
 	if tile_data == null:
 		return true
-		
 	if tile_data.has_custom_data("walkable"):
 		return bool(tile_data.get_custom_data("walkable"))
 	
 	return true
 
+# Check if the tile at a certain coordinate is marked as slippery
+func _is_slippery(position: Vector2) -> bool:
+	if ground_layer == null:
+		return false
+
+	# Get position's tile data
+	var local_position: Vector2 = ground_layer.to_local(position)
+	var cell_coords: Vector2i = ground_layer.local_to_map(local_position)
+	var tile_data: TileData = ground_layer.get_cell_tile_data(cell_coords)
+	
+	if tile_data == null:
+		return false
+	if tile_data.has_custom_data("slippery"):
+		return bool(tile_data.get_custom_data("slippery"))
+	
+	return false
+	
 func _play_walk(dir: Vector2) -> void:
 	if dir == Vector2.RIGHT:
 		if anim.animation != "walk_right":
