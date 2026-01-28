@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://8uptusvt4mvo"]
+[gd_scene format=3 uid="uid://8uptusvt4mvo"]
 
 [ext_resource type="Script" uid="uid://743wytghx0yu" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://cj7eot5b5quq3" path="res://sprite/Mage-Cyan.png" id="2_onrkg"]
@@ -153,16 +153,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(16, 16)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" unique_id=2131028444]
 texture_filter = 1
 script = ExtResource("1_4flbx")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1220581806]
 zoom = Vector2(4, 4)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1251350730]
 sprite_frames = SubResource("SpriteFrames_ivps1")
 animation = &"idle_down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396175531]
 shape = SubResource("RectangleShape2D_sh265")
