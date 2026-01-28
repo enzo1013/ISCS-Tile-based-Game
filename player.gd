@@ -3,7 +3,8 @@ extends CharacterBody2D
 @export var tile_size: Vector2 = Vector2(16, 16)
 var grid_offset: Vector2
 @export var move_time: float = 0.15  
-@export var tilemap: TileMapLayer
+@export var ground_layer: TileMapLayer
+@export var obstacle_layer: TileMapLayer
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -44,6 +45,7 @@ func _handle_input_and_try_move() -> void:
 	_current_dir = input_dir
 
 	if _current_dir != Vector2.ZERO:
+		_last_facing_dir = _current_dir
 		var desired_target := global_position + _current_dir * tile_size
 		if _can_move_to(desired_target):
 			_start_move_to(desired_target)
@@ -108,13 +110,13 @@ func _snap_to_grid(pos: Vector2) -> Vector2:
 	return p + grid_offset
 
 func _can_move_to(target: Vector2) -> bool: # you can use this to help implement collisions
-	if tilemap == null:
+	if obstacle_layer == null:
 		return true
 	
-	var local_target: Vector2 = tilemap.to_local(target)
-	var cell_coords: Vector2i = tilemap.local_to_map(local_target)
+	var local_target: Vector2 = obstacle_layer.to_local(target)
+	var cell_coords: Vector2i = obstacle_layer.local_to_map(local_target)
 	
-	var tile_data: TileData = tilemap.get_cell_tile_data(cell_coords)
+	var tile_data: TileData = obstacle_layer.get_cell_tile_data(cell_coords)
 	
 	if tile_data == null:
 		return true

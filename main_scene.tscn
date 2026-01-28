@@ -1,7 +1,42 @@
 [gd_scene format=4 uid="uid://dwvjlkg8k8x6f"]
 
 [ext_resource type="Texture2D" uid="uid://bebix53u5ygt2" path="res://playfield/tilemap_packed.png" id="1_2c62f"]
+[ext_resource type="Texture2D" uid="uid://cffu65a7hb6n8" path="res://playfield/ice.png" id="1_gyfs4"]
 [ext_resource type="PackedScene" uid="uid://8uptusvt4mvo" path="res://player.tscn" id="2_gyfs4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5x1h"]
+texture = ExtResource("1_gyfs4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+0:2/0/custom_data_0 = true
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fq4dp"]
 texture = ExtResource("1_2c62f")
@@ -160,6 +195,7 @@ texture = ExtResource("1_2c62f")
 custom_data_layer_0/name = "walkable"
 custom_data_layer_0/type = 1
 sources/2 = SubResource("TileSetAtlasSource_fq4dp")
+sources/0 = SubResource("TileSetAtlasSource_d5x1h")
 
 [node name="MainScene" type="Node2D" unique_id=416790539]
 
@@ -173,6 +209,7 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAGAAkAAgAAAAYAAAAHAAkAAgABAAYAAAAIAAkAAgABAAcAAAAJAAkAAgADAAYAAAAJAAcAAgACAAQAAAAJAAgAAgACAAUAAAAGAAcAAgAAAAQAAAAGAAgAAgAAAAUAAAAHAAgAAgABAAUAAAAIAAgAAgADAAUAAAAHAAcAAgADAAQAAAAIAAcAAgABAAQAAAASAAcAAgAAAAQAAAASAAgAAgAAAAUAAAASAAkAAgAAAAYAAAATAAcAAgADAAQAAAATAAgAAgABAAUAAAATAAkAAgABAAYAAAAUAAcAAgABAAQAAAAUAAgAAgADAAUAAAAUAAkAAgABAAcAAAAVAAcAAgACAAQAAAAVAAgAAgACAAUAAAAVAAkAAgADAAYAAAAeAAcAAgAAAAQAAAAeAAgAAgAAAAUAAAAeAAkAAgAAAAYAAAAfAAcAAgADAAQAAAAfAAgAAgABAAUAAAAfAAkAAgABAAYAAAAgAAcAAgABAAQAAAAgAAgAAgADAAUAAAAgAAkAAgABAAcAAAAhAAcAAgACAAQAAAAhAAgAAgACAAUAAAAhAAkAAgADAAYAAAAMAAcAAgAEAAQAAAANAAcAAgAHAAQAAAAOAAcAAgAFAAQAAAAPAAcAAgAGAAQAAAAPAAgAAgAGAAUAAAAMAAgAAgAEAAUAAAANAAgAAgAFAAUAAAAOAAgAAgAHAAUAAAAMAAkAAgAEAAYAAAANAAkAAgAFAAYAAAAOAAkAAgAFAAcAAAAPAAkAAgAHAAYAAAAYAAcAAgAEAAQAAAAYAAgAAgAEAAUAAAAYAAkAAgAEAAYAAAAZAAcAAgAHAAQAAAAZAAgAAgAFAAUAAAAZAAkAAgAFAAYAAAAaAAcAAgAFAAQAAAAaAAgAAgAHAAUAAAAaAAkAAgAFAAcAAAAbAAcAAgAGAAQAAAAbAAgAAgAGAAUAAAAbAAkAAgAHAAYAAAA=")
 tile_set = SubResource("TileSet_xifp5")
 
-[node name="player" parent="." unique_id=1763455643 node_paths=PackedStringArray("tilemap") instance=ExtResource("2_gyfs4")]
+[node name="player" parent="." unique_id=1763455643 node_paths=PackedStringArray("ground_layer", "obstacle_layer") instance=ExtResource("2_gyfs4")]
 position = Vector2(40, -40)
-tilemap = NodePath("../Obstacles")
+ground_layer = NodePath("../Ground")
+obstacle_layer = NodePath("../Obstacles")
