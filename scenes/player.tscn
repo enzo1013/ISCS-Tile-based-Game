@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8uptusvt4mvo"]
 
-[ext_resource type="Script" uid="uid://743wytghx0yu" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://cj7eot5b5quq3" path="res://sprite/Mage-Cyan.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://743wytghx0yu" path="res://scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cj7eot5b5quq3" path="res://assets/Mage-Cyan.png" id="2_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("2_onrkg")

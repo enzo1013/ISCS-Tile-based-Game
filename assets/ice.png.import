@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7eot5b5quq3"
-path="res://.godot/imported/Mage-Cyan.png-d3fbe3ca7644ac23504553e067abb4d2.ctex"
+uid="uid://cffu65a7hb6n8"
+path="res://.godot/imported/ice.png-4af9d1ecfd4b235262be9aa2c329d2ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Mage-Cyan.png"
-dest_files=["res://.godot/imported/Mage-Cyan.png-d3fbe3ca7644ac23504553e067abb4d2.ctex"]
+source_file="res://assets/ice.png"
+dest_files=["res://.godot/imported/ice.png-4af9d1ecfd4b235262be9aa2c329d2ef.ctex"]
 
 [params]
 

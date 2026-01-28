@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dwvjlkg8k8x6f"]
 
-[ext_resource type="Texture2D" uid="uid://bebix53u5ygt2" path="res://playfield/tilemap_packed.png" id="1_2c62f"]
-[ext_resource type="Texture2D" uid="uid://cffu65a7hb6n8" path="res://playfield/ice.png" id="1_gyfs4"]
-[ext_resource type="PackedScene" uid="uid://8uptusvt4mvo" path="res://player.tscn" id="2_gyfs4"]
+[ext_resource type="Texture2D" uid="uid://bebix53u5ygt2" path="res://assets/tilemap_packed.png" id="1_2c62f"]
+[ext_resource type="Texture2D" uid="uid://cffu65a7hb6n8" path="res://assets/ice.png" id="1_gyfs4"]
+[ext_resource type="PackedScene" uid="uid://8uptusvt4mvo" path="res://scenes/player.tscn" id="2_gyfs4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5x1h"]
 texture = ExtResource("1_gyfs4")
