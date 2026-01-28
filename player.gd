@@ -23,15 +23,8 @@ func _ready() -> void:
 	print("After snap: ", global_position)
 	_play_idle(_last_facing_dir)
 
-func _physics_process(delta: float) -> void:
-	if _is_moving:
-		_update_movement(delta)
-	else:
-		_handle_input_and_try_move()
-
-func _handle_input_and_try_move() -> void:
-	var input_dir := Vector2.ZERO
-
+func _physics_process(_delta: float) -> void:
+	var input_dir = Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
 		input_dir = Vector2.RIGHT
 	elif Input.is_action_pressed("ui_left"):
@@ -41,15 +34,17 @@ func _handle_input_and_try_move() -> void:
 	elif Input.is_action_pressed("ui_down"):
 		input_dir = Vector2.DOWN
 
-	_current_dir = input_dir
-
-	if _current_dir != Vector2.ZERO:
-		var desired_target := global_position + _current_dir * tile_size
-		if _can_move_to(desired_target):
-			_start_move_to(desired_target)
+	if input_dir != Vector2.ZERO:
+		velocity = input_dir.normalized() * (tile_size.x / move_time)
+		move_and_slide()
+		if velocity != Vector2.ZERO:
+			_play_walk(input_dir)
+			_current_dir = input_dir
 		else:
 			_play_idle(_current_dir)
+		
 	else:
+		velocity = Vector2.ZERO
 		_play_idle(_last_facing_dir)
 
 func _start_move_to(target: Vector2) -> void:
