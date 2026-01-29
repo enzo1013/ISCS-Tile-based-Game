@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var tile_size: Vector2 = Vector2(16, 16)
 var grid_offset: Vector2
-@export var move_time: float = 0.15  
+@export var move_time: float = 0.15 
 @export var ground_layer: TileMapLayer
 @export var obstacle_layer: TileMapLayer
 
