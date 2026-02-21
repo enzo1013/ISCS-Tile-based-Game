@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771648238
+::res://::1771658761
 icon.svg::CompressedTexture2D::2343054463110527212::1771647032::1771648118::1::::<><><>0<>0<>bef1653721788773e627de50bce8a39e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://assets/::1771648666
-asset_links.txt::TextFile::-1::1771648647::0::1::::<><><>0<>0<><>::
-::res://assets/kenney_pixel-platformer/::1771648668
+::res://assets/::1771648695
+asset_links.txt::TextFile::-1::1771648695::0::1::::<><><>0<>0<><>::
+::res://assets/kenney_pixel-platformer/::1771648670
 License.txt::TextFile::-1::1771648666::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D::6712020341650432810::1771648666::1771648670::1::::<><><>0<>0<>f2adfd0ca1e271b4830172ecb9d6aa66<>res://.godot/imported/Preview.png-872b9dab4fc5e934a7e9485702e6d0fa.ctex::
 SampleA.png::CompressedTexture2D::4778993011766859388::1771648666::1771648670::1::::<><><>0<>0<>52686451c3e545455da34f23178fed75<>res://.godot/imported/SampleA.png-d666961c40aa6366263542c929d03803.ctex::
@@ -14,14 +14,14 @@ Tilesheet (Tiles).txt::TextFile::-1::1771648668::0::1::::<><><>0<>0<><>::
 ::res://assets/kenney_pixel-platformer/Construct 3/::1771648666
 Readme.txt::TextFile::-1::1771648666::0::1::::<><><>0<>0<><>::
 ::res://assets/kenney_pixel-platformer/Tiled/::1771648666
-::res://assets/kenney_pixel-platformer/Tilemap/::1771648666
+::res://assets/kenney_pixel-platformer/Tilemap/::1771651011
 tilemap-backgrounds.png::CompressedTexture2D::5858120967809386264::1771648666::1771648671::1::::<><><>0<>0<>b1cb8158a8f85aeb3bcf217012b3edaa<>res://.godot/imported/tilemap-backgrounds.png-77036ab993af64832c49ce29dde7c88b.ctex::
 tilemap-backgrounds_packed.png::CompressedTexture2D::5500582137758290949::1771648666::1771648671::1::::<><><>0<>0<>d713eb39f6f7aede2e316fed6df2b251<>res://.godot/imported/tilemap-backgrounds_packed.png-5fc85e268c84598e4f6f76300587e4ef.ctex::
-tilemap-characters.png::CompressedTexture2D::6055165235090575596::1771648666::1771648671::1::::<><><>0<>0<>d21c1aca5fa39da2692944c268dbf46a<>res://.godot/imported/tilemap-characters.png-71ed5961b889c4cfbefdaa7086a3da1d.ctex::
+tilemap-characters.png::CompressedTexture2D::6055165235090575596::1771651011::1771651011::1::::<><><>0<>0<>d21c1aca5fa39da2692944c268dbf46a<>res://.godot/imported/tilemap-characters.png-71ed5961b889c4cfbefdaa7086a3da1d.ctex::
 tilemap-characters_packed.png::CompressedTexture2D::723251541952178156::1771648666::1771648671::1::::<><><>0<>0<>ddbb2ba15cb3899af4ba03fd3d56d90b<>res://.godot/imported/tilemap-characters_packed.png-f184406604c9d8a31a3fddfe684d6044.ctex::
 tilemap.png::CompressedTexture2D::2258657661623884462::1771648666::1771648671::1::::<><><>0<>0<>554b30bb1baae4b7547496cfdfc04765<>res://.godot/imported/tilemap.png-06d17e0f155bb72aa9e1508d840554e2.ctex::
 tilemap_packed.png::CompressedTexture2D::1941547972108888052::1771648666::1771648671::1::::<><><>0<>0<>fa5c407372a6e437bb721e2ef11c6664<>res://.godot/imported/tilemap_packed.png-3db90fa13c1b64790081ff62f5435311.ctex::
-::res://assets/kenney_pixel-platformer/Tiles/::1771648668
+::res://assets/kenney_pixel-platformer/Tiles/::1771648671
 tile_0000.png::CompressedTexture2D::4074765181458563731::1771648666::1771648671::1::::<><><>0<>0<>0ec7bf598ce13558712c66b242acbd27<>res://.godot/imported/tile_0000.png-47eb1dc4bc5c6ea8a08c6205c37ce15b.ctex::
 tile_0001.png::CompressedTexture2D::7766926310465971633::1771648666::1771648671::1::::<><><>0<>0<>b276dfb471c3075701baa06e23559523<>res://.godot/imported/tile_0001.png-b9f048e152f691401398425866d0309b.ctex::
 tile_0002.png::CompressedTexture2D::4316910270603272650::1771648666::1771648671::1::::<><><>0<>0<>192be6902042e0e116729a826218eeec<>res://.godot/imported/tile_0002.png-a1194669e17fc7eb63a07b1ccfbc6a68.ctex::
@@ -202,7 +202,7 @@ tile_0176.png::CompressedTexture2D::3543676547141508454::1771648668::1771648670:
 tile_0177.png::CompressedTexture2D::6975072859060634383::1771648668::1771648670::1::::<><><>0<>0<>cffa9efb82d72c07287e823ca0edd91d<>res://.godot/imported/tile_0177.png-bd59adaccb1aa2ba36a5b65f480953ed.ctex::
 tile_0178.png::CompressedTexture2D::352210195181538551::1771648668::1771648670::1::::<><><>0<>0<>43109b14bcf5838ae20ab79e1ce923f5<>res://.godot/imported/tile_0178.png-54859ce8409da67c914feffe0260ae14.ctex::
 tile_0179.png::CompressedTexture2D::1897058379340482345::1771648668::1771648670::1::::<><><>0<>0<>c87e4f3e5987d7da0dcc5d7902305fdf<>res://.godot/imported/tile_0179.png-7c284fa260d97d889a49188a094a20cd.ctex::
-::res://assets/kenney_pixel-platformer/Tiles/Backgrounds/::1771648666
+::res://assets/kenney_pixel-platformer/Tiles/Backgrounds/::1771648671
 tile_0000.png::CompressedTexture2D::8702693734789415674::1771648666::1771648671::1::::<><><>0<>0<>ecbfd385e1366eb042d4ea8de4bd28e1<>res://.godot/imported/tile_0000.png-e81a8ccef471ba448eea59c5f44a2c8e.ctex::
 tile_0001.png::CompressedTexture2D::719605220079194159::1771648666::1771648671::1::::<><><>0<>0<>1b005a7609ccb4e6f373f57893da7ca8<>res://.godot/imported/tile_0001.png-b3ea902b1a76fe04bf49fc0540389159.ctex::
 tile_0002.png::CompressedTexture2D::8480471732423443455::1771648666::1771648671::1::::<><><>0<>0<>041ba7decc4e76f7248e8ea7d9a15ec8<>res://.godot/imported/tile_0002.png-0c03d4d4d1ad354263cc380d88819a60.ctex::
@@ -227,7 +227,7 @@ tile_0020.png::CompressedTexture2D::6299744075207358065::1771648666::1771648671:
 tile_0021.png::CompressedTexture2D::7332614604487159216::1771648666::1771648671::1::::<><><>0<>0<>d0cc4ecf535d2bcf43b682000ca2f0c3<>res://.godot/imported/tile_0021.png-6330c6e09c41cdd73d79f731829de607.ctex::
 tile_0022.png::CompressedTexture2D::8164510095745101695::1771648666::1771648671::1::::<><><>0<>0<>f94532f21ed9fe919722d9ad33a6a316<>res://.godot/imported/tile_0022.png-b1c80d9108170912187f761290a73f8e.ctex::
 tile_0023.png::CompressedTexture2D::2706904068510845926::1771648666::1771648671::1::::<><><>0<>0<>f84a4215cf8faa43a1f6d4e68faa8111<>res://.godot/imported/tile_0023.png-7bf5d30a2df6ea014e9a07f68554c047.ctex::
-::res://assets/kenney_pixel-platformer/Tiles/Characters/::1771648666
+::res://assets/kenney_pixel-platformer/Tiles/Characters/::1771648671
 tile_0000.png::CompressedTexture2D::255046889982716624::1771648666::1771648670::1::::<><><>0<>0<>ee4e7bfb6b14d9d64f6d15f2974145cf<>res://.godot/imported/tile_0000.png-d40c1fef0a258ff1ea3431ed211cec19.ctex::
 tile_0001.png::CompressedTexture2D::5965619320713440855::1771648666::1771648670::1::::<><><>0<>0<>66a1fa86afd652a03e7806833a8df150<>res://.godot/imported/tile_0001.png-5c89f4bae43bb24d4cd395bd3d9b8aeb.ctex::
 tile_0002.png::CompressedTexture2D::3802744437568423329::1771648666::1771648670::1::::<><><>0<>0<>381af71925ac5eb576781b98b12433f0<>res://.godot/imported/tile_0002.png-8bd42ed33b28c5974a26f41666ea67e8.ctex::
@@ -255,5 +255,9 @@ tile_0023.png::CompressedTexture2D::2822954622427458609::1771648666::1771648671:
 tile_0024.png::CompressedTexture2D::6232192619755286516::1771648666::1771648671::1::::<><><>0<>0<>b6114cc2ed931ea19d64d81f7488d0d4<>res://.godot/imported/tile_0024.png-539e6133d1af00fbbfe367d611eb7b60.ctex::
 tile_0025.png::CompressedTexture2D::4665687674616350880::1771648666::1771648671::1::::<><><>0<>0<>c4861f97bb8258d2bc8b16492d17d8d7<>res://.godot/imported/tile_0025.png-4902aa167b0dd3c38f9553b81944b345.ctex::
 tile_0026.png::CompressedTexture2D::5210775378657525571::1771648666::1771648671::1::::<><><>0<>0<>7613fe0f9928613bae4ad781f6104312<>res://.godot/imported/tile_0026.png-fce20d85401c871687d8b8242be81222.ctex::
-::res://scenes/::1771648238
-::res://scripts/::1771648243
+::res://scenes/::1771658738
+level.tscn::PackedScene::5789273809462610914::1771657038::0::1::::<><><>0<>0<><>::uid://ckmr1wq1jop5n::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png<>uid://2wranhrtrv1u::::res://assets/kenney_pixel-platformer/Tilemap/tilemap_packed.png<>uid://dw4gfjx01k266::::res://scenes/player.tscn
+player.tscn::PackedScene::8763657306321580921::1771658738::0::1::::<><><>0<>0<><>::uid://kkl32noykn4o::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-characters_packed.png<>uid://cvwhpoinltnc::::res://scripts/player.gd
+::res://scripts/::1771658738
+player.gd::GDScript::185078704368341040::1771658738::0::1::::<>CharacterBody2D<><>0<>0<><>::
+script_sources.txt::TextFile::-1::1771658697::0::1::::<><><>0<>0<><>::
