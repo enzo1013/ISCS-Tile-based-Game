@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cimbgmil1itk1"]
+
+[ext_resource type="Script" uid="uid://d0dfv0quc8guh" path="res://scripts/spring.gd" id="1_6vrsj"]
+[ext_resource type="Texture2D" uid="uid://2wranhrtrv1u" path="res://assets/kenney_pixel-platformer/Tilemap/tilemap_packed.png" id="1_61klm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vrsj"]
+atlas = ExtResource("1_61klm")
+region = Rect2(144, 90, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6w1c"]
+atlas = ExtResource("1_61klm")
+region = Rect2(126, 90, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iudvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vrsj")
+}],
+"loop": false,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6w1c")
+}],
+"loop": false,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61klm"]
+size = Vector2(18, 12)
+
+[node name="Spring" type="Area2D" unique_id=714394244]
+texture_filter = 1
+script = ExtResource("1_6vrsj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=90660038]
+sprite_frames = SubResource("SpriteFrames_iudvb")
+animation = &"inactive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1817242996]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_61klm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

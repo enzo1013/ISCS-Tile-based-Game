@@ -1,3 +1,2 @@
 https://www.youtube.com/watch?v=5V9f3MT86M8
-https://forum.godotengine.org/t/help-understand-movement-in-default-characterbody2d-script/96202
-https://forum.godotengine.org/t/how-do-i-flip-h-an-animation/20818
+https://www.youtube.com/watch?v=12g5NrZXI3g

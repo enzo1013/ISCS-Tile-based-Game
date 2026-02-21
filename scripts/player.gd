@@ -1,17 +1,8 @@
 extends CharacterBody2D
 
-
 const SPEED = 150.0
 const JUMP_VELOCITY = -200.0
-const MAX_JUMPS = 2
-
-
-var anim_sprite: AnimatedSprite2D
-var jump_count: int
-
-func _ready() -> void:
-	anim_sprite = $AnimatedSprite2D
-	jump_count = 0
+@onready var anim_sprite = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
@@ -35,6 +26,11 @@ func walk(direction: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+
+func spring_up() -> void:
+	const SPRING_VELOCITY = -350.0
+	velocity.y = SPRING_VELOCITY
 
 
 func animate(direction: float) -> void:

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771658761
+::res://::1771659535
 icon.svg::CompressedTexture2D::2343054463110527212::1771647032::1771648118::1::::<><><>0<>0<>bef1653721788773e627de50bce8a39e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1771648695
 asset_links.txt::TextFile::-1::1771648695::0::1::::<><><>0<>0<><>::
@@ -255,9 +255,11 @@ tile_0023.png::CompressedTexture2D::2822954622427458609::1771648666::1771648671:
 tile_0024.png::CompressedTexture2D::6232192619755286516::1771648666::1771648671::1::::<><><>0<>0<>b6114cc2ed931ea19d64d81f7488d0d4<>res://.godot/imported/tile_0024.png-539e6133d1af00fbbfe367d611eb7b60.ctex::
 tile_0025.png::CompressedTexture2D::4665687674616350880::1771648666::1771648671::1::::<><><>0<>0<>c4861f97bb8258d2bc8b16492d17d8d7<>res://.godot/imported/tile_0025.png-4902aa167b0dd3c38f9553b81944b345.ctex::
 tile_0026.png::CompressedTexture2D::5210775378657525571::1771648666::1771648671::1::::<><><>0<>0<>7613fe0f9928613bae4ad781f6104312<>res://.godot/imported/tile_0026.png-fce20d85401c871687d8b8242be81222.ctex::
-::res://scenes/::1771658738
-level.tscn::PackedScene::5789273809462610914::1771657038::0::1::::<><><>0<>0<><>::uid://ckmr1wq1jop5n::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png<>uid://2wranhrtrv1u::::res://assets/kenney_pixel-platformer/Tilemap/tilemap_packed.png<>uid://dw4gfjx01k266::::res://scenes/player.tscn
-player.tscn::PackedScene::8763657306321580921::1771658738::0::1::::<><><>0<>0<><>::uid://kkl32noykn4o::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-characters_packed.png<>uid://cvwhpoinltnc::::res://scripts/player.gd
-::res://scripts/::1771658738
-player.gd::GDScript::185078704368341040::1771658738::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scenes/::1771662350
+level.tscn::PackedScene::5789273809462610914::1771660309::0::1::::<><><>0<>0<><>::uid://ckmr1wq1jop5n::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png<>uid://2wranhrtrv1u::::res://assets/kenney_pixel-platformer/Tilemap/tilemap_packed.png<>uid://dw4gfjx01k266::::res://scenes/player.tscn
+player.tscn::PackedScene::8763657306321580921::1771662387::0::1::::<><><>0<>0<><>::uid://kkl32noykn4o::::res://assets/kenney_pixel-platformer/Tilemap/tilemap-characters_packed.png<>uid://cvwhpoinltnc::::res://scripts/player.gd
+spring.tscn::PackedScene::5359196724468882554::1771662457::0::1::::<><><>0<>0<><>::uid://d0dfv0quc8guh::::res://scenes/spring.gd<>uid://2wranhrtrv1u::::res://assets/kenney_pixel-platformer/Tilemap/tilemap_packed.png
+::res://scripts/::1771662068
+player.gd::GDScript::185078704368341040::1771662387::0::1::::<>CharacterBody2D<><>0<>0<><>::
+spring.gd::GDScript::8920518700641437295::1771662446::0::1::::<>Area2D<><>0<>0<><>::
 script_sources.txt::TextFile::-1::1771658697::0::1::::<><><>0<>0<><>::
