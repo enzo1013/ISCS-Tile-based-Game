@@ -3,6 +3,9 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -350.0
 @onready var anim_sprite = $AnimatedSprite2D
+@onready var coin_label = $CoinLabel
+
+var coin_count: int = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -31,6 +34,11 @@ func walk(direction: float) -> void:
 func spring_up() -> void:
 	const SPRING_VELOCITY = -500.0
 	velocity.y = SPRING_VELOCITY
+
+func collect_coin() -> void:
+	coin_count += 1
+	coin_label.text = "Coins: " + str(coin_count)
+
 
 func fell_on_water() -> void:
 	get_tree().call_deferred("reload_current_scene")

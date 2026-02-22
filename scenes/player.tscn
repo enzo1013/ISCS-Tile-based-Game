@@ -78,3 +78,11 @@ texture_filter = 1
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1864502033]
 position = Vector2(0, -25)
 zoom = Vector2(4.5, 4.5)
+
+[node name="CoinLabel" type="Label" parent="." unique_id=30487882]
+offset_left = -206.0
+offset_top = 68.0
+offset_right = -145.0
+offset_bottom = 91.0
+text = "Coins: 0"
+vertical_alignment = 2
