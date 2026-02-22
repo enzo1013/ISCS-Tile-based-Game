@@ -76,5 +76,5 @@ shape = SubResource("RectangleShape2D_g2els")
 texture_filter = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1864502033]
-position = Vector2(0, -53)
+position = Vector2(0, -25)
 zoom = Vector2(4.5, 4.5)

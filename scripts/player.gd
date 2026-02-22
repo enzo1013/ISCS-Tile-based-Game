@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 150.0
-const JUMP_VELOCITY = -200.0
+const JUMP_VELOCITY = -350.0
 @onready var anim_sprite = $AnimatedSprite2D
 
 
@@ -29,7 +29,7 @@ func walk(direction: float) -> void:
 
 
 func spring_up() -> void:
-	const SPRING_VELOCITY = -350.0
+	const SPRING_VELOCITY = -500.0
 	velocity.y = SPRING_VELOCITY
 
 
