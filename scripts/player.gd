@@ -32,6 +32,8 @@ func spring_up() -> void:
 	const SPRING_VELOCITY = -500.0
 	velocity.y = SPRING_VELOCITY
 
+func fell_on_water() -> void:
+	get_tree().call_deferred("reload_current_scene")
 
 func animate(direction: float) -> void:
 	# Turn

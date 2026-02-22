@@ -1,2 +1,3 @@
 https://www.youtube.com/watch?v=5V9f3MT86M8
 https://www.youtube.com/watch?v=12g5NrZXI3g
+https://stackoverflow.com/questions/77298440/how-do-i-do-in-godot-to-respawn-my-character-after-falling-out-of-the-map
